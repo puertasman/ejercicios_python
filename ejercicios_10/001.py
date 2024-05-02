@@ -14,7 +14,7 @@ A = TypeVar('A')
 # media3(-1, 0, 7) == 2.0
 # media3(-3, 0, 3) == 0.0
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def media3(x: float, y: float,z: float) -> float:
     return (x + y + z ) / 3
 print(media3(1, 3, 8))
@@ -31,7 +31,7 @@ print(media3(-3, 0, 3))
 # sumaMonedas(0, 0, 8, 0, 3) == 100
 # sumaMonedas(1, 1, 1, 1, 1) == 38
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def sumaMonedas(a: int, b: int, c: int, d: int, e: int ) -> int:
     return (a * 1 + b * 2 + c * 5 + d * 10 + e * 20)
 print(sumaMonedas(0, 0, 0, 0, 1))
@@ -45,7 +45,7 @@ print(sumaMonedas(1, 1, 1, 1, 1))
 # ejemplo,
 # volumenEsfera(10) == 4188.790204786391
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def volumenEsfera (radio: float) -> float:
     return (4 / 3) * pi * radio ** 3
 
@@ -60,7 +60,7 @@ print(volumenEsfera(10))
 # areaDeCoronaCircular(2, 5) == 65.97344572538566
 # areaDeCoronaCircular(3, 5) == 50.26548245743669
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def areaDeCoronaCircular(r1 : float, r2: float) -> float:
     return pi * (r2 ** 2 - r1 ** 2)
 
@@ -75,7 +75,7 @@ print(areaDeCoronaCircular(3, 5))
 # ejemplo,
 # ultimoDigito(325) == 5
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def ultimoDigito(num: int) -> int:
     return num % 10
     # versión más rebuscada return int(str(num)[-1])
@@ -91,7 +91,7 @@ print(ultimoDigito(0))
 # maxTres(6, 7, 4) == 7
 # maxTres(6, 7, 9) == 9
 # ---------------------------------------------------------------------
-
+print(20*"-")
 def maxTres(x: int, y: int, z: int) -> int:
     if (x > y):
         if (x > z):
@@ -129,4 +129,47 @@ def rota1(a: list[A]) -> list[A]:
 print(rota1([3, 2, 5, 7]))
 print(rota1(['a', 'b', 'c']))
 
+# ---------------------------------------------------------------------
+# Ejercicio 8. Definir la función
+# rota : (int, List[A]) -> List[A]
+# tal que rota(n, xs) es la lista obtenida poniendo los n primeros
+# elementos de xs al final de la lista. Por ejemplo,
+# rota(1, [3, 2, 5, 7]) == [2, 5, 7, 3]
+# rota(2, [3, 2, 5, 7]) == [5, 7, 3, 2]
+# rota(3, [3, 2, 5, 7]) == [7, 3, 2, 5]
+# ---------------------------------------------------------------------
+print(20*"-")
+def rota(n: int, lista: list[A]) -> list[A]:
+    return lista[n:] + lista [:n]
 
+print(rota(1, [3, 2, 5, 7]))
+print(rota(2, [3, 2, 5, 7]))
+print(rota(3, [3, 2, 5, 7]))
+
+# ---------------------------------------------------------------------
+# Ejercicio 9. Definir la función
+# rango : (List[int]) -> List[int]
+# tal que rango(xs) es la lista formada por el menor y mayor elemento
+# de xs.
+# rango([3, 2, 7, 5]) == [2, 7]
+# ---------------------------------------------------------------------
+print(20*"-")
+def rango(lista: list[int]) -> list[int]:
+    return [min(lista), max(lista)]
+
+print(rango([3, 2, 7, 5]))
+
+# ---------------------------------------------------------------------
+# Ejercicio 10. Definir la función
+# palindromo : (List[A]) -> bool
+# tal que palindromo(xs) se verifica si xs es un palíndromo; es decir,
+# es lo mismo leer xs de izquierda a derecha que de derecha a
+# izquierda. Por ejemplo,
+# palindromo([3, 2, 5, 2, 3]) == True
+# palindromo([3, 2, 5, 6, 2, 3]) == False
+# ---------------------------------------------------------------------
+print(20*"-")
+def palindromo (lista: list[A]) -> bool:
+    return lista == lista[::-1]
+print(palindromo([3, 2, 5, 2, 3]))
+print(palindromo([3, 2, 5, 6, 2, 3]))

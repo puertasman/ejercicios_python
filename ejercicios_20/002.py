@@ -27,7 +27,7 @@ print(interior([2, 5, 3, 7, 3]))
 # finales(3, [2, 5, 4, 7, 9, 6]) == [7, 9, 6]
 # ---------------------------------------------------------------------
 print(20*"-")
-def finales(n: int, xs: list[TypeVar("A")]) -> list[A]:
+def finales(n: int, xs: list[A]) -> list[A]:
     return xs[-n:]
 
 print(finales(3, [2, 5, 4, 7, 9, 6]))

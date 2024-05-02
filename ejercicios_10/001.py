@@ -172,4 +172,4 @@ print(20*"-")
 def palindromo (lista: list[A]) -> bool:
     return lista == lista[::-1]
 print(palindromo([3, 2, 5, 2, 3]))
-print(palindromo([3, 2, 5, 6, 2, 3]))
+print(palindromo([3, 2, 5, 6, 2, 3])) 

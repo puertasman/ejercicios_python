@@ -42,11 +42,11 @@ print(finales(3, [2, 5, 4, 7, 9, 6]))
 # segmento(5, 3, [3, 4, 1, 2, 7, 9, 0]) == []
 # ---------------------------------------------------------------------
 print (20*"-")
-def segmento(m: int, n: int, xs: list[A] -> list[A]:
+def segmento(m: int, n: int, xs: list[A]) -> list[A]:
     return xs[m+1:n]
-segmento(3, 4, [3, 4, 1, 2, 7, 9, 0])
-segmento(3, 5, [3, 4, 1, 2, 7, 9, 0])
-segmento(5, 3, [3, 4, 1, 2, 7, 9, 0])
+print(segmento(3, 4, [3, 4, 1, 2, 7, 9, 0]))
+print(segmento(3, 5, [3, 4, 1, 2, 7, 9, 0]))
+print(segmento(5, 3, [3, 4, 1, 2, 7, 9, 0]))
 
 # ---------------------------------------------------------------------
 # Ejercicio 14. Definir la función
@@ -58,7 +58,7 @@ segmento(5, 3, [3, 4, 1, 2, 7, 9, 0])
 print(20*"-")
 def extremos(n: int, xs: list[A]) -> list[A]:
     return xs[:n] + xs[-n:]
-extremos(3, [2, 6, 7, 1, 2, 4, 5, 8, 9, 2, 3])
+print(extremos(3, [2, 6, 7, 1, 2, 4, 5, 8, 9, 2, 3]))
 
 # ---------------------------------------------------------------------
 # Ejercicio 15. Definir la función
@@ -74,10 +74,10 @@ print(20*"-")
 def mediano(x: int, y: int, z:int) -> int:
     return x + y + z - min([x,y,z]) - max([x,y,z])
 
-mediano(3, 2, 5)
-mediano(2, 4, 5)
-mediano(2, 6, 5)
-mediano(2, 6, 6)
+print(mediano(3, 2, 5))
+print(mediano(2, 4, 5))
+print(mediano(2, 6, 5))
+print(mediano(2, 6, 6))
 
 # ---------------------------------------------------------------------
 # Ejercicio 16. Definir la función
@@ -90,8 +90,8 @@ mediano(2, 6, 6)
 print(20*'-')
 def tresIguales(x:int, y: int, z:int) -> bool:
     return x == y == z
-tresIguales(4, 4, 4)
-tresIguales(4, 3, 4)
+print(tresIguales(4, 4, 4))
+print(tresIguales(4, 3, 4))
 
 # ---------------------------------------------------------------------
 # Ejercicio 17. Definir la función
@@ -105,8 +105,8 @@ print(20*'-')
 def tresDiferentes(x:int, y: int, z:int) -> bool:
     return x != y  and x != z and y != z
 
-tresDiferentes(3, 5, 2)
-tresDiferentes(3, 5, 3)
+print(tresDiferentes(3, 5, 2))
+print(tresDiferentes(3, 5, 3))
 
 # ---------------------------------------------------------------------
 # Ejercicio 18. Definir la función
@@ -119,5 +119,5 @@ tresDiferentes(3, 5, 3)
 print(20*'-')
 def cuatroIguales(x: int, y: int, z: int, u:int)->bool:
     return x == y and tresIguales(y,z,u)
-cuatroIguales(5, 5, 5, 5)
-cuatroIguales(5, 5, 4, 5)
+print(cuatroIguales(5, 5, 5, 5))
+print(cuatroIguales(5, 5, 4, 5))
